@@ -2,7 +2,7 @@ export async function uploadDocument(file: File) {
   const form = new FormData();
   form.append('file', file);
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/upload`, {
+  const res = await fetch(`/api/proxy-chat/upload`, {
     method: 'POST',
     body: form,
   });

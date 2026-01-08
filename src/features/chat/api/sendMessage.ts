@@ -1,5 +1,5 @@
 export async function sendMessage(sessionId: number, question: string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/chat/ask`, {
+  const res = await fetch(`/api/proxy-chat/chat/ask`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sessionId, question }),
